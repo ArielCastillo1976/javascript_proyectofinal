@@ -1,0 +1,136 @@
+:root {
+    --azul-oscuro: #023e8a;
+    --azul-claro: #48cae4;
+    --gris-fondo: #f8f9fa;
+    --blanco: #ffffff;
+    --rojo: #dc3545;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--gris-fondo);
+    color: #333;
+}
+
+header {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.productos {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.producto {
+    background: var(--blanco);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, background-color 0.4s;
+}
+
+.producto:hover {
+    transform: scale(1.03);
+}
+
+.producto.agregado {
+    background-color: #d4edda;
+}
+
+.producto h3 {
+    margin-top: 0;
+    color: var(--azul-oscuro);
+}
+
+.producto button {
+    margin-top: 1rem;
+    padding: 0.6rem;
+    width: 100%;
+    background-color: var(--azul-claro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #00b4d8;
+}
+
+.carrito {
+    flex: 1;
+    background: var(--blanco);
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    max-width: 320px;
+}
+
+.carrito h2 {
+    color: var(--azul-oscuro);
+}
+
+.carrito ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.carrito li {
+    margin-bottom: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.carrito .eliminar {
+    background: none;
+    border: none;
+    color: var(--rojo);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.carrito button {
+    padding: 0.6rem;
+    margin-top: 0.6rem;
+    width: 100%;
+    background-color: var(--rojo);
+    border: none;
+    color: var(--blanco);
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carrito button:hover {
+    background-color: #b02a37;
+}
+
+#finalizarCompra {
+    background-color: var(--azul-oscuro);
+}
+
+#finalizarCompra:hover {
+    background-color: #012a5e;
+}
